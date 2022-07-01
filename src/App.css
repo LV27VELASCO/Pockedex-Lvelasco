@@ -420,16 +420,17 @@ justify-content: space-between;
   justify-content: center;
   align-items: center;
   padding: 30px 0px 0px 0px;
-  font-size: .93rem;
-  gap: .4rem;
+  font-size: .94rem;
+  gap: .8rem;
 }
 
 .flechas{
   color: white;
   font-weight: bold;
   border-radius: 5px;
+  text-align: center;
   background-color: red;
-  padding: 3px 6px;
+  padding: 3px 7px;
   cursor: pointer;
 }
 
@@ -440,6 +441,15 @@ justify-content: space-between;
   gap: .9rem;
 }
 
-.numbers-pag{
+.page-number{
   cursor: pointer;
+
+}
+
+.page-active{
+  background-color: red;
+  padding: 1px 5px;
+  border-radius: 5px;
+  color: #ffffff;
+  box-shadow: 0px 0px 5px 0px rgba(216, 40, 40, 0.849);
 }

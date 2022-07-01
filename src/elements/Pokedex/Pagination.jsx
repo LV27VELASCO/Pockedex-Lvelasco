@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 const Pagination = ({ arrayPages, currentpages, setCurrentPages, quantityPages }) => {
+
 
     const prevPag = () => {
         if (currentpages - 1 === 0) {
@@ -17,12 +18,14 @@ const Pagination = ({ arrayPages, currentpages, setCurrentPages, quantityPages }
         }
     }
 
+    const onChangePag = n => { setCurrentPages(n) }
+
 
     return (
         <div className='container-pagination'>
             <div className='flechas' onClick={prevPag}>&#60;</div>
             <ul className='container-numbers'>{arrayPages?.map(num => (
-                <li key={num} className='numbers-pag'>{num}</li>
+                <li onClick={() => onChangePag(num)} key={num} className={currentpages === num ? 'page-number page-active': 'page-number'}>{num}</li>
             ))
             }</ul>
             <div className='flechas' onClick={nextPag}>&#62;</div>
