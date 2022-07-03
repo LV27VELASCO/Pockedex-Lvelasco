@@ -87,6 +87,13 @@ const ContainerCard = () => {
             arrayCard?.map(pokemons => (<PockeCard key={pokemons.url} pokemons={pokemons} />))
 
         }
+        <Pagination
+          arrayPages={arrayPages}
+          currentpages={currentpages}
+          setCurrentPages={setCurrentPages}
+          quantityPages={quantityPages}
+          pockeSearch={pockeSearch} />
+        
       </section>
     </>
   )
