@@ -347,7 +347,7 @@ justify-content: space-between;
 
 .container-datos {
   width: 96%;
-  height: 99%;
+  height: 98%;
   padding-top: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -391,7 +391,9 @@ justify-content: space-between;
 .caracteristicas {
   padding: 5px;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  align-items: center;
   gap: 1rem;
 }
 
