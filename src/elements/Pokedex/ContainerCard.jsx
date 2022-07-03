@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import useApiPockemon from '../../Hooks/useApiPokemon'
 import PockeCard from './PockeCard'
 import { useSelector } from 'react-redux'
-import Select from 'react-select'
 import Pagination from './Pagination'
 import Form from './Form'
 
