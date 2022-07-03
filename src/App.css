@@ -303,6 +303,8 @@ justify-content: space-between;
   border: 1px solid rgba(82, 78, 78, 0.398);
   font-family: var(---Poppins-);
   color: rgba(28, 27, 27, 0.911);
+  background-color: rgba(111, 112, 112, 0.633);
+  color: rgb(255, 255, 255);
 }
 
 .select-son:hover{
@@ -312,6 +314,8 @@ justify-content: space-between;
 .select-son.active{
   box-shadow:0px 0px 5px 0px rgba(196, 43, 43, 0.911);
   color: rgba(8, 8, 8, 0.959);
+  background-color: rgb(184, 16, 16);
+  color: whitesmoke;
 }
 
 
