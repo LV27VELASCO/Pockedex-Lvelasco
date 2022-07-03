@@ -258,11 +258,16 @@ justify-content: space-between;
   color: rgba(241, 10, 10, 0.914);
 }
 
-
-.from-Select{
+.container-select{
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+.from-Select{
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -600,5 +605,13 @@ justify-content: space-between;
 @media screen and (max-width:541px) {
   .Card {
     width: 180px;
+  }
+
+  .from-Select{
+    width: 100%;
+  }
+
+  .input-bienvenida{
+    width: 178px;
   }
 }
