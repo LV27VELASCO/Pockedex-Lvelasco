@@ -16,11 +16,11 @@ const Home = () => {
       <div className='container-footer'>
         <div className="container-bola">
           <div className="circulo-blanco">
-          <div className="circulo-negro">
-          <div className="circulo-gris"></div>
+            <div className="circulo-negro">
+              <div className="circulo-gris"></div>
+            </div>
           </div>
-          </div>
-    
+
         </div>
         <div className="color-red"></div>
         <div className="color-black"></div>

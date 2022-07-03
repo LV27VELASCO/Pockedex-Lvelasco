@@ -28,7 +28,7 @@ const InputHome = () => {
               message: 'We need to know your name coach'
             },
             minLength:{
-              value:4,
+              value:3,
               message:"This doesn't seem to be a coach's name :c"
             }})} />
         <button className='button-home'>Go!</button>

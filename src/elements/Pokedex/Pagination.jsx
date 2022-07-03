@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-const Pagination = ({ arrayPages, currentpages, setCurrentPages, quantityPages }) => {
+const Pagination = ({ arrayPages, currentpages, setCurrentPages, quantityPages, pockeSearch }) => {
 
 
     const prevPag = () => {
@@ -22,10 +22,10 @@ const Pagination = ({ arrayPages, currentpages, setCurrentPages, quantityPages }
 
 
     return (
-        <div className='container-pagination'>
+        <div className={pockeSearch ? 'pagination-off' : 'container-pagination'}>
             <div className='flechas' onClick={prevPag}>&#60;</div>
             <ul className='container-numbers'>{arrayPages?.map(num => (
-                <li onClick={() => onChangePag(num)} key={num} className={currentpages === num ? 'page-number page-active': 'page-number'}>{num}</li>
+                <li onClick={() => onChangePag(num)} key={num} className={currentpages === num ? 'page-number page-active' : 'page-number'}>{num}</li>
             ))
             }</ul>
             <div className='flechas' onClick={nextPag}>&#62;</div>
