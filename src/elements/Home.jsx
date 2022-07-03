@@ -24,6 +24,9 @@ const Home = () => {
         </div>
         <div className="color-red"></div>
         <div className="color-black"></div>
+        <div className='contain-copy'>
+          <span className='copyringht'>Luis Velasco in 2022 &copy;</span>
+        </div>
       </div>
     </>
   )
