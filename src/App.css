@@ -438,6 +438,10 @@
   text-transform: uppercase;
 }
 
+.pokemon-name::first-letter{
+  text-transform: uppercase;
+}
+
 .name-type>span {
   font-family: var(---Ruluko-);
   font-size: 1.1rem;
