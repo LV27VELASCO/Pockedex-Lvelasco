@@ -55,9 +55,6 @@ const ContainerCard = () => {
     }
   }
 
-  const proveedores = [
-    { label: 'don', value: 'yo' }
-  ]
 
   return (
     <>

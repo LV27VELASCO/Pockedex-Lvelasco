@@ -15,17 +15,17 @@ const useApiPockemon = () => {
             axios.get(urlApiPokemon)
                 .then(res => setApiPockemons(res.data.results))
                 .catch(err => console.log(err))
-                .finally(res => setStateFilter(false))
+                .finally(()=>setStateFilter(false))
         } else {
             const UrlTypeFilter = `https://pokeapi.co/api/v2/type/${filterType}/`
             axios.get(UrlTypeFilter)
                 .then(res => {
-                    const Array = res.data.pokemon.map(e => e.pokemon)
-                    setApiPockemons(Array)
+                    const resultArray = res.data.pokemon.map(e => e.pokemon)
+                    setApiPockemons(resultArray)
                     
                 })
                 .catch(err => console.log(err))
-                .finally(res => setStateFilter(true))
+                .finally(()=>setStateFilter(true))
         }
     }, [filterType])
 
@@ -37,7 +37,6 @@ const useApiPockemon = () => {
     }, [])
 
 
-    console.log(apiPockemons)
 
 
     return { apiPockemons, pockeType, setFilterType, stateFilter }
