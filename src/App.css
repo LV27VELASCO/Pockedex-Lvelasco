@@ -648,19 +648,7 @@
 }
 
 
-@media screen and (max-width:541px) {
-  .Card {
-    width: 180px;
-  }
 
-  .from-Select {
-    width: 100%;
-  }
-
-  .input-bienvenida {
-    width: 178px;
-  }
-}
 
 /* SECTION POKEMON*/
 
@@ -672,6 +660,7 @@
   padding: 20px;
   gap: 2rem;
 }
+
 
 .section1 {
   width: 70%;
@@ -1101,6 +1090,29 @@
   
 }
 
+
+
+
+@media screen and (max-width:541px) {
+  .Card {
+    width: 180px;
+  }
+
+  .from-Select {
+    width: 100%;
+  }
+
+  .input-bienvenida {
+    width: 178px;
+  }
+
+  .Tarjet {
+    width: 100%;
+  }
+.section1 {
+  width: 80%;
+}
+}
 
 @media screen and (max-width:830px) {
   .habilitys {
