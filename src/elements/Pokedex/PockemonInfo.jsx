@@ -64,7 +64,7 @@ const PockemonInfo = () => {
                     </div>
                 </div>
                 <div className='stats'>
-                    <h2 style={letterColor}>Stats</h2>
+                    <h2 className='stats-name' style={letterColor}>Stats</h2>
                     <div className='contain-medidor'>
                         <div className='caracter'>
                             <div className='porcentaje'>
