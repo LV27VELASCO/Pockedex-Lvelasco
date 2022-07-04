@@ -11,7 +11,7 @@ const Home = () => {
         </div>
         <h2>¡Hello coach!</h2>
         <h4>To start, give me your name</h4>
-        <InputHome />
+        <InputHome/>
       </div>
       <div className='container-footer'>
         <div className="container-bola">

@@ -21,8 +21,8 @@ const useApiPockemon = () => {
             axios.get(UrlTypeFilter)
                 .then(res => {
                     const Array = res.data.pokemon.map(e => e.pokemon)
-                    console.log(Array)
                     setApiPockemons(Array)
+                    
                 })
                 .catch(err => console.log(err))
                 .finally(res => setStateFilter(true))
@@ -37,9 +37,10 @@ const useApiPockemon = () => {
     }, [])
 
 
-   
+    console.log(apiPockemons)
 
-    return { apiPockemons, pockeType, setFilterType,stateFilter}
+
+    return { apiPockemons, pockeType, setFilterType, stateFilter }
 
 }
 

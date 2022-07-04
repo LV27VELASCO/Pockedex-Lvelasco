@@ -9,11 +9,12 @@ import PockemonInfo from './elements/Pokedex/PockemonInfo'
 
 function App() {
 
+
   return (
     <div className="App">
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/' element={<PockedexScreem/>} >
+        <Route path='/' element={<PockedexScreem/>}>
           <Route path='pockedex' element={<ContainerCard/>}/>
           <Route path='pockedex/:id' element={<PockemonInfo/>}/>
         </Route>

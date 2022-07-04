@@ -20,7 +20,7 @@ const PockeCard = ({ pokemons }) => {
                                 <h2 className='pokemon-name'>{pockemon?.name}</h2>
                             </div>
                             <span>{pockemon?.types[0].type.name}</span><span>{pockemon?.types[1] ? ` / ${pockemon?.types[1].type.name}` : ''}</span>
-                            <p>Type</p>
+                            <p>Guy</p>
                         </header>
                         <div className='caracteristicas'>
                             <div className='poder'>

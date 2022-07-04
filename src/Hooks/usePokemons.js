@@ -1,7 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import useApiPockemon from './useApiPokemon'
 
 const usePokemons = ({ pokemons }) => {
+
 
     const [pockemon, setPockemon] = useState()
     const [loading, setloading] = useState(true)

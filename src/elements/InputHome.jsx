@@ -13,8 +13,8 @@ const InputHome = () => {
   const navigate = useNavigate()
 
   const submit = data => {
-    dispach(setNameGlobal(data.nameUser)),
-      reset({ nameUser: '' })
+    dispach(setNameGlobal(data.nameUser))
+    reset({ nameUser: '' })
     navigate('/pockedex')
   }
 

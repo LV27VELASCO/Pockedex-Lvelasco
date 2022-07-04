@@ -24,21 +24,22 @@ const PockemonInfo = () => {
                         <h2>#{pokemonInfo?.id}</h2>
                     </div>
                     <div className='contain-name'>
+                        <span className='linea'></span>
                         <h2 className='poke-name' style={letterColor}>{pokemonInfo?.name}</h2>
                     </div>
                     <div className='compostura'>
-                        <div className='poder'>
-                            <h4 className='nombre'>Peso</h4>
+                        <div className='contain-compostura'>
+                            <h4 className='nombre-desc'>Peso</h4>
                             <span>{pokemonInfo?.weight}</span>
                         </div>
-                        <div className='poder'>
-                            <h4 className='nombre'>Altura</h4>
+                        <div className='contain-compostura'>
+                            <h4 className='nombre-desc'>Altura</h4>
                             <span>{pokemonInfo?.height}</span>
                         </div>
                     </div>
                     <div className='type-hability'>
                         <div className='contain-type'>
-                            <h3>Type</h3>
+                            <h3>Guy</h3>
                             <div className='type'>
                                 {
                                     pokemonInfo?.types.map((types, index) => (
@@ -64,7 +65,10 @@ const PockemonInfo = () => {
                     </div>
                 </div>
                 <div className='stats'>
+                    <div className='container-stats-name'>
+                    <span className='linea'></span>
                     <h2 className='stats-name' style={letterColor}>Stats</h2>
+                    </div>
                     <div className='contain-medidor'>
                         <div className='caracter'>
                             <div className='porcentaje'>
@@ -103,6 +107,7 @@ const PockemonInfo = () => {
             </section>
             <section className='section2'>
                 <div className='movements'>
+                    <span className='linea'></span>
                     <h2 style={letterColor}>Movements</h2>
                 </div>
                 <div className='list-movements'>
