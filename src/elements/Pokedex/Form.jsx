@@ -5,9 +5,7 @@ import useApiPockemon from '../../Hooks/useApiPokemon'
 
 
 
-const Form = ({ pockeSearch, setPockeSearch}) => {
-
-    const {pockeType,setFilterType,stateFilter}=useApiPockemon()
+const Form = ({ pockeSearch, setPockeSearch,pockeType,setFilterType,stateFilter }) => {
 
     const inputText = e => {
         setPockeSearch(e.target.value)

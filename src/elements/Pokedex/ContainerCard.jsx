@@ -8,7 +8,7 @@ import Form from './Form'
 const ContainerCard = () => {
 
   const nameUser = useSelector(state => state.nameUser)
-  const { apiPockemons } = useApiPockemon()
+  const { apiPockemons,pockeType,setFilterType,stateFilter } = useApiPockemon()
 
   //Logica Input 
   const [pockeSearch, setPockeSearch] = useState()
@@ -64,7 +64,10 @@ const ContainerCard = () => {
         </div>
         <div className='container-select'>
           <Form setPockeSearch={setPockeSearch}
-            pockeSearch={pockeSearch} />
+            pockeSearch={pockeSearch} 
+            pockeType={pockeType}
+            setFilterType={setFilterType}
+            stateFilter={stateFilter}/>
         </div>
         <Pagination
           arrayPages={arrayPages}
