@@ -24,10 +24,10 @@ const Form = ({ pockeSearch, setPockeSearch}) => {
                     onChange={inputText} />
             </form>
             <select onChange={onChangeSelect} className={`select-son ${stateFilter?'active':''}`}>
-                <option value="All pokemons">All pokemons</option>
+                <option className='options' value="All pokemons">All pokemons</option>
                 {
                     pockeType?.map(type => (
-                        <option key={type.name} value={type.name}>{type.name}</option>
+                        <option className='options' key={type.name} value={type.name}>{type.name}</option>
                     ))
                 }
             </select>
