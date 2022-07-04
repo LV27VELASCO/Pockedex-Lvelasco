@@ -1123,6 +1123,10 @@
 .section2{
   width: 90%;
 }
+
+.list-movements{
+  padding: 10px;
+}
 }
 
 @media screen and (max-width:830px) {

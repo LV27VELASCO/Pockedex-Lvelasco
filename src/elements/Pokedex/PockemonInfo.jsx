@@ -24,7 +24,7 @@ const PockemonInfo = () => {
                         <h2>#{pokemonInfo?.id}</h2>
                     </div>
                     <div className='contain-name'>
-                        <h2 className='poke-name'>{pokemonInfo?.name}</h2>
+                        <h2 className='poke-name' style={letterColor}>{pokemonInfo?.name}</h2>
                     </div>
                     <div className='compostura'>
                         <div className='poder'>
