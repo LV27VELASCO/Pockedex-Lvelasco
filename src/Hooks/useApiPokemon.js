@@ -37,6 +37,7 @@ const useApiPockemon = () => {
     }, [])
 
 
+   
 
     return { apiPockemons, pockeType, setFilterType,stateFilter}
 

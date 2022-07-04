@@ -15,6 +15,8 @@ const usePokemons = ({ pokemons }) => {
             .finally(()=>setloading(!loading))}
 , [])
 
+
+
     return { pockemon,loading}
 
 }

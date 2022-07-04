@@ -1,6 +1,6 @@
-
 import pokedex from '../../assets/img/Pokedex.png'
-import ContainerCard from './ContainerCard'
+import { Outlet} from 'react-router-dom'
+
 
 const PockedexScreem = () => {
 
@@ -19,9 +19,7 @@ const PockedexScreem = () => {
         <div className="color-red-h"></div>
         <div className="color-black-h"></div>
       </div>
-
-
-      <ContainerCard />
+      <Outlet/>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import { setNameGlobal } from '../store/slice/nameUser.slice'
@@ -15,7 +15,7 @@ const InputHome = () => {
   const submit = data => {
     dispach(setNameGlobal(data.nameUser)),
       reset({ nameUser: '' })
-    navigate('/Pockedex')
+    navigate('/pockedex')
   }
 
   return (
