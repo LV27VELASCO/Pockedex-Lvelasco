@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector} from 'react-redux'
 import { setNameGlobal } from '../store/slice/nameUser.slice'
 import { useNavigate } from 'react-router-dom'
 
@@ -11,6 +11,7 @@ const InputHome = () => {
   const dispach = useDispatch()
 
   const navigate = useNavigate()
+
 
   const submit = data => {
     dispach(setNameGlobal(data.nameUser))

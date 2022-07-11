@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Pagination = ({ arrayPages, currentpages, setCurrentPages, quantityPages, pockeSearch }) => {
+const Pagination = ({ arrayPages, currentpages, setCurrentPages, quantityPages}) => {
 
 
     const prevPag = () => {
@@ -22,7 +22,7 @@ const Pagination = ({ arrayPages, currentpages, setCurrentPages, quantityPages, 
 
 
     return (
-        <div className={pockeSearch ? 'pagination-off' : 'container-pagination'}>
+        <div className='container-pagination'>
             <div className='flechas' onClick={prevPag}>&#60;</div>
             <ul className='container-numbers'>{arrayPages?.map(num => (
                 <li onClick={() => onChangePag(num)} key={num} className={currentpages === num ? 'page-number page-active' : 'page-number'}>{num}</li>

@@ -8,11 +8,13 @@ import Form from './Form'
 const ContainerCard = () => {
 
   const nameUser = useSelector(state => state.nameUser)
+  
   const { apiPockemons,pockeType,setFilterType,stateFilter } = useApiPockemon()
 
   //Logica Input 
-  const [pockeSearch, setPockeSearch] = useState()
-  const [filterPockemon, setFilterPockemon] = useState()
+  const [pockeSearch, setPockeSearch] = useState("")
+  const [filterPockemon, setFilterPockemon] = useState([])
+
 
 
   useEffect(() => {
@@ -23,7 +25,7 @@ const ContainerCard = () => {
 
 
 
-
+ 
 
   //Logica Paginacion
   const [currentpages, setCurrentPages] = useState(1)
@@ -31,16 +33,18 @@ const ContainerCard = () => {
   let arrayCard = []
   let cardPerPage = 10
 
-  if (apiPockemons?.length < cardPerPage) {
-    arrayCard = [...apiPockemons]
+  
+
+  if ( (pockeSearch? filterPockemon : apiPockemons)?.length < cardPerPage) {
+    arrayCard = [...(pockeSearch? filterPockemon : apiPockemons)]
   } else {
     const lastCard = cardPerPage * currentpages
-    arrayCard = apiPockemons?.slice(lastCard - cardPerPage, lastCard)
+    arrayCard = (pockeSearch? filterPockemon : apiPockemons)?.slice(lastCard - cardPerPage, lastCard)
   }
 
 
   let arrayPages = []
-  let quantityPages = Math.ceil(apiPockemons?.length / cardPerPage)//cantidad maxima de paginas
+  let quantityPages = Math.ceil((pockeSearch? filterPockemon : apiPockemons)?.length / cardPerPage)//cantidad maxima de paginas
   let pagePerBlock = 5
   let currentBlock = Math.ceil(currentpages / pagePerBlock)
 
@@ -59,33 +63,32 @@ const ContainerCard = () => {
   return (
     <>
       <div className='container-bienvenida'>
+
         <div className='coach'>
-          <h2><span>Welcome</span> {nameUser ? nameUser : 'coach'}, let's prepare you for battle!!</h2>
+          <h2><span>Welcome</span> {nameUser}, let's prepare you for battle!!</h2>
         </div>
+
         <div className='container-select'>
           <Form setPockeSearch={setPockeSearch}
             pockeSearch={pockeSearch} 
             pockeType={pockeType}
             setFilterType={setFilterType}
-            stateFilter={stateFilter}/>
+            stateFilter={stateFilter}
+            setCurrentPages={setCurrentPages}/>
         </div>
+
         <Pagination
           arrayPages={arrayPages}
           currentpages={currentpages}
           setCurrentPages={setCurrentPages}
           quantityPages={quantityPages}
           pockeSearch={pockeSearch} />
-
       </div>
+
       <section className='container-cards'>
 
         {
-          pockeSearch
-            ?
-            filterPockemon?.map(pokemons => (<PockeCard key={pokemons.url} pokemons={pokemons} />))
-            :
             arrayCard?.map(pokemons => (<PockeCard key={pokemons.url} pokemons={pokemons} />))
-
         }
         <Pagination
           arrayPages={arrayPages}

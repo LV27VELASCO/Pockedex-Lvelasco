@@ -1153,6 +1153,24 @@
   font-size: var(---Font-size-caract);
 }
 
+.err-404{
+  width: 100%;
+  height: 81.60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(---Poppins-);
+  font-size: .80rem;
+  padding: 10px;
+}
+
+.err-404>*{
+  padding: 10px;
+}
+
+.err{
+  border-right: 1px solid  gray;
+}
 
 
 
@@ -1182,6 +1200,8 @@
 }
 
 .list-movements{
+  display: grid;
+  grid-template-columns:auto auto;
   padding: 10px;
 }
 }
